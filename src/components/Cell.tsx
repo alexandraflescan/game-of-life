@@ -1,9 +1,11 @@
 import * as React from 'react';
 import '../App.css';
 
-function Cell(){
+function Cell(props:any){
     return(
-<div className="cell"></div>
+<td className={`cell ${props.status ? 'alive' : ''}`  }
+key={props.thisKey} 
+onClick={props.clickMe}></td>
     )
  
 }
